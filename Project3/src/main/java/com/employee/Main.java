@@ -20,14 +20,26 @@ public class Main {
                 " </work>";
 
         Book book = APIResponseParser.parse(response);
+        Book book1 = APIResponseParser.parseAll(response);
 
-        System.out.println("------ BOOK INFORMATION -------");
+        System.out.println("------ BOOK INFORMATION from Method \"Method1 : Parse \" -------");
         System.out.println("Book Title: " + book.getTitle());
         System.out.println("Book Author: " + book.getAuthor());
         System.out.println("Book Publication Year: " + book.getPublicationYear());
         System.out.println("Book Average Rating: " + book.getAverageRating());
         System.out.println("Book Ratings Count : " + book.getRatingsCount());
         System.out.println("Book Image Url : " + book.getImageUrl());
+
+
+        System.out.println("------ BOOK INFORMATION from Method \"Method2 : ParseAll \" -------");
+        System.out.println("Book Title: " + book1.getTitle());
+        System.out.println("Book Author: " + book1.getAuthor());
+        System.out.println("Book Publication Year: " + book1.getPublicationYear());
+        System.out.println("Book Average Rating: " + book1.getAverageRating());
+        System.out.println("Book Ratings Count : " + book1.getRatingsCount());
+        System.out.println("Book Image Url : " + book1.getImageUrl());
+
+
 
         System.out.println("------ END OF PROGRAM ------");
 
